@@ -14,3 +14,14 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+## Diffusion model training
+
+This repository includes `train_diffusion.py` which trains a diffusion model with multi-head attention on CIFAR-10.
+
+```bash
+pip install torch torchvision diffusers
+python train_diffusion.py --data_dir ./data --out_dir ./outputs --epochs 1
+```
+
+The script also reconstructs a few images using the trained model and generates new samples. Reconstruction quality is measured using a custom normalized mean absolute error function.
